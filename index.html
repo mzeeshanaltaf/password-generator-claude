@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RandPass — Unbreakable by Design</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1 class="logo">RandPass</h1>
+      <p class="tagline">Unbreakable by Design</p>
+    </header>
+
+    <main class="card">
+
+      <!-- Password Output -->
+      <div class="password-row">
+        <input
+          id="passwordOutput"
+          class="password-input"
+          type="text"
+          readonly
+          placeholder="Click Generate…"
+          aria-label="Generated password"
+        />
+        <button id="copyBtn" class="copy-btn" aria-label="Copy password">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span id="copyLabel">Copy</span>
+        </button>
+      </div>
+
+      <!-- Strength Indicator -->
+      <div class="strength-section">
+        <div class="strength-bar-wrapper" aria-label="Password strength">
+          <div class="strength-bar">
+            <div class="segment" id="seg1"></div>
+            <div class="segment" id="seg2"></div>
+            <div class="segment" id="seg3"></div>
+            <div class="segment" id="seg4"></div>
+            <div class="segment" id="seg5"></div>
+          </div>
+          <span id="strengthLabel" class="strength-label">—</span>
+        </div>
+        <div class="crack-time">
+          <span class="crack-icon">&#x1F512;</span>
+          <span>Crack time: </span>
+          <span id="crackTime" class="crack-value">—</span>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Length Slider -->
+      <div class="control-group">
+        <div class="control-header">
+          <label for="lengthSlider" class="control-label">Password Length</label>
+          <span id="lengthValue" class="control-value">16</span>
+        </div>
+        <input
+          id="lengthSlider"
+          class="slider"
+          type="range"
+          min="10"
+          max="50"
+          value="16"
+          aria-label="Password length"
+        />
+        <div class="slider-ticks">
+          <span>10</span>
+          <span>20</span>
+          <span>30</span>
+          <span>40</span>
+          <span>50</span>
+        </div>
+      </div>
+
+      <!-- Character Set Checkboxes -->
+      <div class="control-group">
+        <p class="control-label">Include Characters</p>
+        <div class="checkbox-grid">
+          <label class="checkbox-label">
+            <input type="checkbox" id="chkUpper" checked />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">
+              <span class="charset-name">Uppercase</span>
+              <span class="charset-example">A–Z</span>
+            </span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="chkLower" checked />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">
+              <span class="charset-name">Lowercase</span>
+              <span class="charset-example">a–z</span>
+            </span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="chkNumbers" checked />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">
+              <span class="charset-name">Numbers</span>
+              <span class="charset-example">0–9</span>
+            </span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" id="chkSymbols" checked />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">
+              <span class="charset-name">Symbols</span>
+              <span class="charset-example">!@#$…</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Generate Button -->
+      <button id="generateBtn" class="generate-btn">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <polyline points="1 20 1 14 7 14"></polyline>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+        </svg>
+        Generate Password
+      </button>
+
+    </main>
+
+    <footer class="footer">
+      <p>Passwords are generated locally &amp; never transmitted.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
