@@ -24,8 +24,8 @@ A lightweight, client-side random password generator with real-time strength ana
 No installation or build step required.
 
 ```bash
-git clone https://github.com/your-username/randpass.git
-cd randpass
+git clone https://github.com/mzeeshanaltaf/password-generator-claude.git
+cd password-generator-claude
 ```
 
 Then open `index.html` in any modern browser.
@@ -78,8 +78,9 @@ randpass/
 ├── index.html            # Page markup
 ├── style.css             # Dark theme styles
 ├── script.js             # Password logic
+├── og-image.png          # Open Graph / social sharing preview (1200×630)
+├── passwords.png         # Favicon
 ├── CLAUDE.md             # AI assistant context
-├── IMPLEMENTATION_PLAN.md
 └── README.md
 ```
 

@@ -6,6 +6,39 @@
   <title>RandPass — Unbreakable by Design</title>
   <link rel="icon" type="image/png" sizes="16x16" href="/passwords.png">
   <link rel="stylesheet" href="style.css" />
+
+  <!-- SEO -->
+  <meta name="description" content="RandPass generates cryptographically secure random passwords instantly in your browser — no data ever leaves your device. Choose length, character sets, and copy with one click." />
+  <link rel="canonical" href="https://randpass.zeeshanai.cloud/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://randpass.zeeshanai.cloud/" />
+  <meta property="og:title" content="RandPass — Unbreakable by Design" />
+  <meta property="og:description" content="Generate cryptographically secure passwords instantly in your browser. No data ever leaves your device." />
+  <meta property="og:image" content="https://randpass.zeeshanai.cloud/og-image.png" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RandPass — Unbreakable by Design" />
+  <meta name="twitter:description" content="Generate cryptographically secure passwords instantly in your browser. No data ever leaves your device." />
+  <meta name="twitter:image" content="https://randpass.zeeshanai.cloud/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "RandPass",
+    "description": "A client-side cryptographically secure random password generator. Passwords are generated locally and never transmitted.",
+    "applicationCategory": "SecurityApplication",
+    "operatingSystem": "Any (browser-based)",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://randpass.zeeshanai.cloud/"
+  }
+  </script>
 </head>
 <body>
   <div class="page">
@@ -27,7 +60,7 @@
           aria-label="Generated password"
         />
         <button id="copyBtn" class="copy-btn" aria-label="Copy password">
-          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
             <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
           </svg>
@@ -37,7 +70,7 @@
 
       <!-- Strength Indicator -->
       <div class="strength-section">
-        <div class="strength-bar-wrapper" aria-label="Password strength">
+        <div class="strength-bar-wrapper" aria-label="Password strength" aria-live="polite">
           <div class="strength-bar">
             <div class="segment" id="seg1"></div>
             <div class="segment" id="seg2"></div>
@@ -48,7 +81,7 @@
           <span id="strengthLabel" class="strength-label">—</span>
         </div>
         <div class="crack-time">
-          <span class="crack-icon">&#x1F512;</span>
+          <span class="crack-icon" role="img" aria-label="Lock">&#x1F512;</span>
           <span>Crack time: </span>
           <span id="crackTime" class="crack-value">—</span>
         </div>
@@ -121,7 +154,7 @@
 
       <!-- Generate Button -->
       <button id="generateBtn" class="generate-btn">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="23 4 23 10 17 10"></polyline>
           <polyline points="1 20 1 14 7 14"></polyline>
           <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
